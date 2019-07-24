@@ -1,0 +1,8 @@
+DaoType=S2JDBC
+DefaultResourcePath=/kensyuJuly24th/src/main/resources
+DefaultRootPackage=problem6
+DefaultSrcPath=/kensyuJuly24th/src/main/java
+ServletPath=kensyuJuly24th
+ViewType=SA-Struts
+WebContentsRoot=src/main/webapp
+eclipse.preferences.version=1
