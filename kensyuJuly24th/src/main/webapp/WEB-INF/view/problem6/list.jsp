@@ -1,14 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 	<head>
 	<meta charset="UTF-8">
 	<title>過去半年間の入力誕生日の結果</title>
-	<link rel = "stylesheet" href = "./style/stylesheet.css"/>
+	<link rel = "stylesheet" href = "/kensyuJuly24th/style/stylesheet.css"/>
 	</head>
 	<body>
 		<h2>過去半年間の入力誕生日の結果</h2>
@@ -22,25 +20,24 @@
 		</tr>
 
 		<!-- マップの行数だけ繰り返し表示させる -->
-		<c:forEach var = "fortuneday" items = "${fortuneDay}">
+		<c:forEach var = "omikujiMap" items = "${resultForHalfAYearMap}">
 
 		<tr>
-			<td>${fortuneday}</td>
-
-			<!-- キーの日付からString[]のオブジェクトを取得し、各要素を取り出す -->
-			<c:forEach var = "omikuji" items = "${omikujiMap[fortuneday]}">
-			<td>${omikuji}</td>
-			</c:forEach>
+			<td>${omikujiMap.key}</td>
+			<td>${omikujiMap.value.fortune.fortuneName}</td>
+			<td>${omikujiMap.value.negaigoto}</td>
+			<td>${omikujiMap.value.akinai}</td>
+			<td>${omikujiMap.value.gakumon}</td>
 
 		</tr>
 		</c:forEach>
 
 		</table><br>
-		<html:form action = "/backOmikuji">
-			<html:hidden property="omikuji" value = "${omikuji}"/>
+		<s:form action = "/getOmikuji/getOmikuji/">
+			<html:hidden property="birthday" value = "${birthday}"/>
 			<input type = "submit" value = "結果画面へ戻る" class = "omikuji_button"/>
-		</html:form><br>
+		</s:form><br>
 
-		<html:link forward = "top">トップへ戻る</html:link>
+		<a href = "/kensyuJuly24th/inputBirthday/">トップへ戻る</a>
 	</body>
 </html>

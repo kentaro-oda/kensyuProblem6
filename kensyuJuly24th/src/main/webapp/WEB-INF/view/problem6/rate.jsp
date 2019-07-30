@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://struts.apache.org/tags-html" prefix="html" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page isELIgnored="false" %>
 
 <!DOCTYPE html>
@@ -9,7 +7,7 @@
 	<head>
 	<meta charset="UTF-8">
 	<title>運勢の割合</title>
-	<link rel = "stylesheet" href = "./style/stylesheet.css"/>
+	<link rel = "stylesheet" href = "/kensyuJuly24th/style/stylesheet.css"/>
 	</head>
 	<body>
 		<h2>各運勢の割合</h2>
@@ -20,10 +18,10 @@
 		<tr>
 			<th class = "table_size" colspan = "2">半年間の割合</th>
 		</tr>
-		<c:forEach var = "fortune" items = "${fortuneName}">
+		<c:forEach var = "rateHalfAYear" items = "${fortuneRateForHalfAYearMap}">
 			<tr>
-			<th>${fortune}</th>
-			<td>${rateHalfAYearMap[fortune]}％</td>
+			<th>${rateHalfAYear.key}</th>
+			<td>${rateHalfAYear.value}％</td>
 			</tr>
 		</c:forEach>
 		</table><br>
@@ -33,21 +31,21 @@
 		<tr>
 			<th class = "table_size" colspan = "2">当日の割合</th>
 		</tr>
-		<c:forEach var = "fortune" items = "${fortuneName}">
+		<c:forEach var = "rateToday" items = "${fortuneRateDuringTodayMap}">
 			<tr>
-			<th>${fortune}</th>
-			<td>${rateTodayMap[fortune]}％</td>
+			<th>${rateToday.key}</th>
+			<td>${rateToday.value}％</td>
 			</tr>
 		</c:forEach>
 		</table>
 		</div><br>
 
 		<div class = "top_margin">
-		<html:form action = "/backOmikuji">
-			<html:hidden property="omikuji" value = "${omikuji}"/>
+		<s:form action = "/getOmikuji/getOmikuji/">
+			<html:hidden property="birthday" value = "${birthday}"/>
 			<input type = "submit" value = "結果画面へ戻る" class = "omikuji_button"/>
-		</html:form></div><br>
+		</s:form></div><br>
 
-		<html:link forward = "top">トップへ戻る</html:link>
+		<a href = "/kensyuJuly24th/inputBirthday/">トップへ戻る</a>
 	</body>
 </html>
