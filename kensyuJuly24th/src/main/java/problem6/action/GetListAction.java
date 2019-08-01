@@ -19,25 +19,21 @@ import problem6.service.OmikujiService;
  */
 public class GetListAction {
 
-	/**
-	 * 結果画面から送られてくるアクションフォーム DaysFormをDI
-	 */
+	//結果画面から送られてくるアクションフォーム DaysFormをDI
 	@Resource
 	@ActionForm
 	public DaysForm daysForm;
 
-	/**
-	 * 過去半年間の入力誕生日の占い結果を検索するためOmikujiServiceをDI
-	 */
+
+	 //過去半年間の入力誕生日の占い結果を検索するためOmikujiServiceをDI
 	@Resource
 	public OmikujiService omikujiService;
 
-	/**
-	 * メソッド内で使われるフィールド
+ 	/*
+ 	 * メソッド内で使われるフィールド
 	 *
 	 * today,dayOfHalfAYearAgo,sqlBirthday		daysFormから送られてくる値をDate型に変換するフィールド
 	 * resultForHalfAYearMap	キーに占い実行日、バリューに占いの結果(運勢名、願い事、商い、学問)を格納したマップ
-	 *
 	 */
 	public Date today;
 	public Date dayOfHalfAYearAgo;
@@ -52,16 +48,14 @@ public class GetListAction {
 	@Execute(validator = false)
 	public String getList() {
 
-		/**
-		 * アクションフォームの情報をDate型に変換し取得
-		 */
+
+		//アクションフォームの情報をDate型に変換し取得
 		today = Date.valueOf(daysForm.strToday);
 		dayOfHalfAYearAgo = Date.valueOf(daysForm.strDayOfHalfAYearAgo);
 		sqlBirthday = Date.valueOf(daysForm.birthday);
 
-		/**
-		 * 過去半年間の入力誕生日の占い結果を検索
-		 */
+
+		//過去半年間の入力誕生日の占い結果を検索
 		resultForHalfAYearMap = omikujiService.getresultForHalfAYear
 				(sqlBirthday, dayOfHalfAYearAgo, today);
 

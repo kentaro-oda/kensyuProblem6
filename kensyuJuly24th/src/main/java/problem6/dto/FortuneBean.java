@@ -10,14 +10,10 @@ package problem6.dto;
  */
 public class FortuneBean extends CommonBean{
 
-	/**
-	 * 運勢コード
-	 */
+	//運勢コード
 	private int fortuneId;
 
-	/**
-	 * 運勢名
-	 */
+	//運勢名
 	private String fortuneName;
 
 	public int getFortuneId() {

@@ -14,9 +14,7 @@ import problem6.form.BirthdayForm;
  */
 public class InputBirthdayAction {
 
-	/**
-	 * 入力した誕生日のアクションフォーム BirthdayFormをDI
-	 */
+	//入力した誕生日のアクションフォーム BirthdayFormをDI
 	@Resource
 	@ActionForm
 	public BirthdayForm birthdayForm;

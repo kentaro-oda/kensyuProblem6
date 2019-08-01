@@ -23,26 +23,21 @@ import problem6.service.ResultService;
  */
 public class GetOmikujiAction {
 
-	/**
-	 * 入力誕生日のアクションフォーム BirthdayFormをDI
-	 */
+
+	//入力誕生日のアクションフォーム BirthdayFormをDI
 	@Resource
 	@ActionForm
 	protected BirthdayForm birthdayForm;
 
-	/**
-	 * 過去に同日・同誕生日でおみくじを引いたか調べる処理と結果を登録する際に用いるためResultServiceをDI
-	 */
+	//過去に同日・同誕生日でおみくじを引いたか調べる処理と結果を登録する際に用いるためResultServiceをDI
 	@Resource
 	protected ResultService resultService;
 
-	/**
-	 * おみくじの結果を獲得する際に用いるためOmikujiServiceをDI
-	 */
+	//おみくじの結果を獲得する際に用いるためOmikujiServiceをDI
 	@Resource
 	protected OmikujiService omikujiService;
 
-	/**
+	/*
 	 * メソッド内で使われるフィールド
 	 *
 	 * sqlBirthday	フォームから送られた誕生日をDate型に変換したもの
@@ -53,7 +48,6 @@ public class GetOmikujiAction {
 	 * omikujiId	おみくじコード
 	 * omikujiBean	おみくじの結果を格納するDTO
 	 * result		結果を登録するために必要なResultのエンティティの変数
-	 *
 	 */
 	public Date sqlBirthday;
 	public Calendar calendar;
@@ -72,31 +66,24 @@ public class GetOmikujiAction {
 	 */
 	@Execute(validator = false)
 	public String getOmikuji() {
-		/**
-		 * 入力された誕生日をsql.date型に変換し、今日の日付を取得しつつsqi.Date型に変換
-		 */
+
+		//入力された誕生日をsql.date型に変換し、今日の日付を取得しつつsqi.Date型に変換
 		sqlBirthday = Date.valueOf(birthdayForm.birthday);
 		calendar = Calendar.getInstance();
 		today = new  Date(calendar.getTime().getTime());
 
-		/**
-		 * 半年前の日付を取得
-		 */
+		//半年前の日付を取得
 		calendar.add(Calendar.MONTH, -6);
 		dayOfHalfAYearAgo = new  Date(calendar.getTime().getTime());
 
-		/**
-		 * フォーム送信用に今日の日付と半年前の日付をString型に変換
-		 */
+		//フォーム送信用に今日の日付と半年前の日付をString型に変換
 		strToday = today.toString();
 		strDayOfHalfAYearAgo = dayOfHalfAYearAgo.toString();
 
-		/**
-		 * 誕生日と今日の日付からおみくじコードを取得
-		 */
+		//誕生日と今日の日付からおみくじコードを取得
 		omikujiId = resultService.getOmikujiIdFindByFortunedayAndBirthday(today, sqlBirthday);
 
-		/**
+		/*
 		 * おみくじコードが0の時(同日・同誕生日でおみくじを引いていない場合)
 		 * おみくじテーブルの行数から乱数を生成し、おみくじコードとして取得
 		 */
@@ -105,12 +92,11 @@ public class GetOmikujiAction {
 			omikujiId = r.nextInt((int) omikujiService.getCount());
 		}
 
-		/**
-		 * 取得したおみくじコードからおみくじの結果を取得
-		 */
+		//取得したおみくじコードからおみくじの結果を取得
 		omikujiBean = omikujiService.getOmikujiFindByOmikujiId(omikujiId);
 
-		/**
+
+		/*
 		 * 同日・同誕生日でおみくじを引いていない場合
 		 * 今回の結果をresultテーブルに登録
 		 */

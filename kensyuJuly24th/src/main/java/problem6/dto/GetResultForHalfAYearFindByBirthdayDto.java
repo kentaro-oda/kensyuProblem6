@@ -9,29 +9,19 @@ import java.sql.Date;
  */
 public class GetResultForHalfAYearFindByBirthdayDto {
 
-	/**
-	 * 占い日
-	 */
+	//占い日
 	public Date fortuneDay;
 
-	/**
-	 * 運勢名
-	 */
+	//運勢名
 	public String fortuneName;
 
-	/**
-	 * 願い事
-	 */
+	//願い事
 	public String negaigoto;
 
-	/**
-	 * 商い
-	 */
+	//商い
 	public String akinai;
 
-	/**
-	 * 学問
-	 */
+	//学問
 	public String gakumon;
 
 }

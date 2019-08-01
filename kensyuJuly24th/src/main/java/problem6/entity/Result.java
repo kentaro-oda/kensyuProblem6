@@ -19,27 +19,19 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Result extends Common {
 
-	/**
-	 * 占い日(主キー)
-	 */
+	//占い日(主キー)
 	@Id
 	public Date fortuneDay;
 
-	/**
-	 * 誕生日(主キー)
-	 */
+	//誕生日(主キー)
 	@Id
 	public Date birthday;
 
-	/**
-	 * おみくじコード
-	 */
+	//おみくじコード
 	@Basic(fetch = FetchType.LAZY)
 	public int omikujiId;
 
-	/**
-	 * おみくじエンティティとの結合
-	 */
+	//おみくじエンティティとの結合
 	@ManyToOne
 	@JoinColumn(name = "OMIKUJI_ID", referencedColumnName = "OMIKUJI_ID")
 	public Omikuji omikuji;

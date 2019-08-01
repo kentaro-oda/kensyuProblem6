@@ -12,23 +12,15 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public abstract class Common {
 
-	/**
-	 * 更新者
-	 */
+	//更新者
 	public String updater;
 
-	/**
-	 * 更新日
-	 */
+	//更新日
 	public Date updateDay;
 
-	/**
-	 * 作成者
-	 */
+	//作成者
 	public String creater;
 
-	/**
-	 * 作成日
-	 */
+	//作成日
 	public Date createDay;
 }

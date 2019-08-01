@@ -10,18 +10,12 @@ import java.sql.Date;
  */
 public class GetFortuneCountForHalfAYearParam {
 
-	/**
-	 * 半年前の日付
-	 */
+	//半年前の日付
 	public Date dayOfHalfAYearAgo;
 
-	/**
-	 * 今日の日付
-	 */
+	//今日の日付
 	public Date today;
 
-	/**
-	 * 運勢コード
-	 */
+	//運勢コード
 	public int fortuneId;
 }

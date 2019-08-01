@@ -8,13 +8,9 @@ package problem6.dto;
  */
 public class GetFortuneCountDto {
 
-	/**
-	 * 運勢名
-	 */
+	//運勢名
 	public String fortuneName;
 
-	/**
-	 * 件数(行数)
-	 */
+	//件数(行数)
 	public Long count;
 }

@@ -12,24 +12,16 @@ import java.sql.Date;
 
 public abstract class CommonBean {
 
-	/**
-	 * 更新者
-	 */
+	//更新者
 	private String updater;
 
-	/**
-	 * 更新日
-	 */
+	//更新日
 	private Date updateDay;
 
-	/**
-	 * 作成者
-	 */
+	//作成者
 	private String creater;
 
-	/**
-	 * 作成日
-	 */
+	//作成日
 	private Date createDay;
 
 	public String getUpdater() {

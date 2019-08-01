@@ -22,20 +22,16 @@ import problem6.service.ResultService;
  */
 public class GetRateAction {
 
-	/**
-	 * 結果画面から送られてくるアクションフォーム DaysFormをDI
-	 */
+	//結果画面から送られてくるアクションフォーム DaysFormをDI
 	@Resource
 	@ActionForm
 	public DaysForm daysForm;
 
-	/**
-	 * 割合を求めるために必要な数を求めるためResultServiceをDI
-	 */
+	//割合を求めるために必要な数を求めるためResultServiceをDI
 	@Resource
 	public ResultService resultService;
 
-	/**
+	/*
 	 * メソッド内で使われるフィールド
 	 *
 	 * dayOfHalfAYearAgo	半年前の日付
@@ -66,26 +62,18 @@ public class GetRateAction {
 	@Execute(validator = false)
 	public String getRate() {
 
-		/**
-		 * フォームから受け取った情報をDate型に変換
-		 */
+		//フォームから受け取った情報をDate型に変換
 		dayOfHalfAYearAgo = Date.valueOf(daysForm.strDayOfHalfAYearAgo);
 		today = Date.valueOf(daysForm.strToday);
 
-		/**
-		 * 過去半年間の各運勢の割合を格納するマップをLinkedHashMap型で作成
-		 */
+		//過去半年間の各運勢の割合を格納するマップをLinkedHashMap型で作成
 		fortuneRateForHalfAYearMap = new LinkedHashMap<>();
 
-		/**
-		 * 過去半年間の全件数と運勢ごとの件数を取得
-		 */
+		//過去半年間の全件数と運勢ごとの件数を取得
 		count = resultService.getAllCountForHalfAYear(dayOfHalfAYearAgo, today);
 		fortuneCountMap = resultService.getFortuneCountForHalfAYear(dayOfHalfAYearAgo, today);
 
-		/**
-		 * 運勢ごとに割合を計算し、四捨五入したものをマップに登録
-		 */
+		//運勢ごとに割合を計算し、四捨五入したものをマップに登録
 		for(String fortuneName : fortuneCountMap.keySet()) {
 			rate = (fortuneCountMap.get(fortuneName) / count) * 100;
 			bigDecimal = new BigDecimal(rate);
@@ -93,25 +81,17 @@ public class GetRateAction {
 			fortuneRateForHalfAYearMap.put(fortuneName, bdRate);
 		}
 
-		/**
-		 * 各運勢の件数を格納するマップを空にする
-		 */
+		//各運勢の件数を格納するマップを空にする
 		fortuneCountMap.clear();
 
-		/**
-		 * 今日一日の各運勢の割合を格納するマップをLinkedHashMap型で作成
-		 */
+		//今日一日の各運勢の割合を格納するマップをLinkedHashMap型で作成
 		fortuneRateDuringTodayMap = new LinkedHashMap<>();
 
-		/**
-		 * 今日一日の全件数と運勢ごとの件数を取得
-		 */
+		//今日一日の全件数と運勢ごとの件数を取得
 		count = resultService.getAllCountDurringToday(today);
 		fortuneCountMap = resultService.getFortuneCountDuringToday(today);
 
-		/**
-		 * 運勢ごとに割合を計算し、四捨五入したものをマップに登録
-		 */
+		//運勢ごとに割合を計算し、四捨五入したものをマップに登録
 		for(String fortuneName : fortuneCountMap.keySet()) {
 			rate = (fortuneCountMap.get(fortuneName) / count) * 100;
 			bigDecimal = new BigDecimal(rate);
@@ -119,9 +99,7 @@ public class GetRateAction {
 			fortuneRateDuringTodayMap.put(fortuneName, bdRate);
 		}
 
-		/**
-		 * 各運勢の件数を格納するマップを空にする
-		 */
+		//各運勢の件数を格納するマップを空にする
 		fortuneCountMap.clear();
 
 

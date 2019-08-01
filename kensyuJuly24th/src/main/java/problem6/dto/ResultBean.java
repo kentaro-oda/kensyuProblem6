@@ -12,19 +12,13 @@ import java.sql.Date;
  */
 public class ResultBean extends CommonBean {
 
-	/**
-	 * 占い日
-	 */
+	//占い日
 	private Date fortuneDay;
 
-	/**
-	 * 入力した誕生日
-	 */
+	//入力した誕生日
 	private Date birthday;
 
-	/**
-	 * おみくじ(OmikujiBeanの要素もつ)
-	 */
+	//おみくじ(OmikujiBeanクラスの要素もつ)
 	private OmikujiBean omikuji;
 
 	public Date getFortuneDay() {

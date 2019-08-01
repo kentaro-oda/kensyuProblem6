@@ -9,19 +9,13 @@ import java.sql.Date;
  */
 public class GetResultForHalfAYearFindByBirthdayParam {
 
-	/**
-	 * 誕生日
-	 */
+	//誕生日
 	public Date sqlBirthday;
 
-	/**
-	 * 半年前の日付
-	 */
+	//半年前の日付
 	public Date dayOfHalfAYearAgo;
 
-	/**
-	 * 今日の日付
-	 */
+	//今日の日付
 	public Date today;
 
 }

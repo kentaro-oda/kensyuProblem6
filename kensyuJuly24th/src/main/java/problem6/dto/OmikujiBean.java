@@ -10,29 +10,19 @@ package problem6.dto;
  */
 public class OmikujiBean extends CommonBean {
 
-	/**
-	 * おみくじコード
-	 */
+	//おみくじコード
 	private int omikujiId;
 
-	/**
-	 * 運勢(FortuneBeanテーブルの要素持つ)
-	 */
+	//運勢(FortuneBeanクラスの要素持つ)
 	private FortuneBean fortune;
 
-	/**
-	 * 願い事
-	 */
+	//願い事
 	private String negaigoto;
 
-	/**
-	 * 商い
-	 */
+	//商い
 	private String akinai;
 
-	/**
-	 * 学問
-	 */
+	//学問
 	private String gakumon;
 
 	public int getOmikujiId() {
