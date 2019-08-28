@@ -15,7 +15,7 @@ public class FortuneNames {
 	/**
 	 * fortuneIdのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<Integer>(this, "fortune_id")/fortuneIdのプロパティ名
+	 * @return	fortuneIdのプロパティ名
 	 */
 	public static PropertyName<Integer> fortuneId(){
 		return new PropertyName<Integer>("fortuneId");
@@ -24,7 +24,7 @@ public class FortuneNames {
 	/**
 	 * fortuneNameのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<String>("fortune_name")/fortuneNameのプロパティ名
+	 * @return	fortuneNameのプロパティ名
 	 */
 	public static PropertyName<String> fortuneName(){
 		return new PropertyName<String>("fortuneName");
@@ -33,7 +33,7 @@ public class FortuneNames {
 	/**
 	 * omikujiListのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<List<Omikuji>>("omikuji")/omikujiListのプロパティ名
+	 * @return	omikujiListのプロパティ名
 	 */
 	public static _OmikujiNames omikujiList(){
 		return new _OmikujiNames("omikujiList");
@@ -74,7 +74,7 @@ public class FortuneNames {
 		/**
 		 * fortuneIdのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<Integer>(this, "fortune_id")/fortuneIdのプロパティ名
+		 * @return	fortuneIdのプロパティ名
 		 */
 		public PropertyName<Integer> fortuneId(){
 			return new PropertyName<Integer>(this, "fortuneId");
@@ -83,7 +83,7 @@ public class FortuneNames {
 		/**
 		 * fortuneNameのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<String>(this, "fortune_name")/fortuneNameのプロパティ名
+		 * @return	fortuneNameのプロパティ名
 		 */
 		public PropertyName<String> fortuneName(){
 			return new PropertyName<String>(this, "fortuneName");
@@ -92,7 +92,7 @@ public class FortuneNames {
 		/**
 		 * omikujiListのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<List<Omikuji>>("omikuji")/omikujiListのプロパティ名
+		 * @return	omikujiListのプロパティ名
 		 */
 		public _OmikujiNames omikujiList(){
 			return new _OmikujiNames(this, "omikujiList");

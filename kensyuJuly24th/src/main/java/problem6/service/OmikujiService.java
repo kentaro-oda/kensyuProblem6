@@ -1,14 +1,11 @@
 package problem6.service;
 
-//import static problem6.entity.FortuneNames.*;
 import static problem6.entity.OmikujiNames.*;
 
 import java.sql.Date;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-import javax.annotation.Resource;
 
 import problem6.dto.FortuneBean;
 import problem6.dto.GetResultForHalfAYearFindByBirthdayDto;
@@ -26,10 +23,6 @@ import problem6.entity.Omikuji;
  *
  */
 public class OmikujiService extends AbstractService<Omikuji> {
-
-	//運勢名を獲得するメソッドを使用するためFortuneService型変数をDI
-	@Resource
-	protected FortuneService fortuneService;
 
 	/**
 	 * おみくじコードから運勢名、願い事、商い、学問を取得するメソッド

@@ -15,7 +15,7 @@ public class CommonNames {
 	/**
 	 * updaterのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<String>("updater")/updaterのプロパティ名
+	 * @return	updaterのプロパティ名
 	 */
 	public static PropertyName<String> updater(){
 		return new PropertyName<String>("updater");
@@ -24,7 +24,7 @@ public class CommonNames {
 	/**
 	 * updateDayのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<Date>("update_day")/updateDayのプロパティ名
+	 * @return	updateDayのプロパティ名
 	 */
 	public static PropertyName<Date> updateDay(){
 		return new PropertyName<Date>("updateDay");
@@ -33,7 +33,7 @@ public class CommonNames {
 	/**
 	 * createrのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<String>("creater")/createrのプロパティ名
+	 * @return	createrのプロパティ名
 	 */
 	public static PropertyName<String> creater(){
 		return new PropertyName<String>("creater");
@@ -42,7 +42,7 @@ public class CommonNames {
 	/**
 	 * createDayのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<Date>("create_day")/createDayのプロパティ名
+	 * @return	createDayのプロパティ名
 	 */
 	public static PropertyName<Date> createDay(){
 		return new PropertyName<Date>("createDay");
@@ -83,7 +83,7 @@ public class CommonNames {
 		/**
 		 * updaterのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<String>("updater")/updaterのプロパティ名
+		 * @return	updaterのプロパティ名
 		 */
 		public PropertyName<String> updater(){
 			return new PropertyName<String>(this, "updater");
@@ -92,7 +92,7 @@ public class CommonNames {
 		/**
 		 * updateDayのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<Date>("update_day")/updateDayのプロパティ名
+		 * @return	updateDayのプロパティ名
 		 */
 		public PropertyName<Date> updateDay(){
 			return new PropertyName<Date>(this, "updateDay");
@@ -102,7 +102,7 @@ public class CommonNames {
 		/**
 		 * createrのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<String>("creater")/createrのプロパティ名
+		 * @return	createrのプロパティ名
 		 */
 		public PropertyName<String> creater(){
 			return new PropertyName<String>(this, "creater");
@@ -111,7 +111,7 @@ public class CommonNames {
 		/**
 		 * createDayのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<Date>("create_day")/createDayのプロパティ名
+		 * @return	createDayのプロパティ名
 		 */
 		public PropertyName<Date> createDay(){
 			return new PropertyName<Date>(this, "createDay");

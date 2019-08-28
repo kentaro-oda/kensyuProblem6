@@ -16,7 +16,7 @@ public class OmikujiNames {
 	/**
 	 * omikujiIdのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<Integer>("omikuji_id")/omikujiIdのプロパティ名
+	 * @return	omikujiIdのプロパティ名
 	 */
 	public static PropertyName<Integer> omikujiId(){
 		return new PropertyName<Integer>("omikujiId");
@@ -25,7 +25,7 @@ public class OmikujiNames {
 	/**
 	 * fortuneIdのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<Integer>(this, "fortune_id")/fortuneIdのプロパティ名
+	 * @return	fortuneIdのプロパティ名
 	 */
 	public static PropertyName<Integer> fortuneId(){
 		return new PropertyName<Integer>("fortuneId");
@@ -34,7 +34,7 @@ public class OmikujiNames {
 	/**
 	 * negaigotoのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<String>("negaigoto")/negaigotoのプロパティ名
+	 * @return	negaigotoのプロパティ名
 	 */
 	public static PropertyName<String> negaigoto(){
 		return new PropertyName<String>("negaigoto");
@@ -43,7 +43,7 @@ public class OmikujiNames {
 	/**
 	 * akinaiのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<String>("akinai")/akinaiのプロパティ名
+	 * @return	akinaiのプロパティ名
 	 */
 	public static PropertyName<String> akinai(){
 		return new PropertyName<String>("akinai");
@@ -52,7 +52,7 @@ public class OmikujiNames {
 	/**
 	 * gakumonのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<String>("gakumon")/gakumonのプロパティ名
+	 * @return	gakumonのプロパティ名
 	 */
 	public static PropertyName<String> gakumon(){
 		return new PropertyName<String>("gakumon");
@@ -61,7 +61,7 @@ public class OmikujiNames {
 	/**
 	 * resultListのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<List<Result>>("result")/resultListのプロパティ名
+	 * @return	resultListのプロパティ名
 	 */
 	public static _ResultNames resultList(){
 		return new _ResultNames("resultList");
@@ -70,7 +70,7 @@ public class OmikujiNames {
 	/**
 	 * fortuneのプロパティ名を返すメソッド
 	 *
-	 * @return	new PropertyName<Fortune>("fortune")/fortuneのプロパティ名
+	 * @return	fortuneのプロパティ名
 	 */
 	public static _FortuneNames fortune(){
 		return new _FortuneNames("fortune");
@@ -112,7 +112,7 @@ public class OmikujiNames {
 		/**
 		 * omikujiIdのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<Integer>("omikuji_id")/omikujiIdのプロパティ名
+		 * @return	omikujiIdのプロパティ名
 		 */
 		public PropertyName<Integer> omikujiId(){
 			return new PropertyName<Integer>(this, "omikujiId");
@@ -121,7 +121,7 @@ public class OmikujiNames {
 		/**
 		 * fortuneIdのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<Integer>(this, "fortune_id")/fortuneIdのプロパティ名
+		 * @return	fortuneIdのプロパティ名
 		 */
 		public PropertyName<Integer> fortuneId(){
 			return new PropertyName<Integer>(this, "fortuneId");
@@ -130,7 +130,7 @@ public class OmikujiNames {
 		/**
 		 * negaigotoのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<String>("negaigoto")/negaigotoのプロパティ名
+		 * @return	negaigotoのプロパティ名
 		 */
 		public PropertyName<String> negaigoto(){
 			return new PropertyName<String>(this, "negaigoto");
@@ -139,7 +139,7 @@ public class OmikujiNames {
 		/**
 		 * akinaiのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<String>("akinai")/akinaiのプロパティ名
+		 * @return	akinaiのプロパティ名
 		 */
 		public PropertyName<String> akinai(){
 			return new PropertyName<String>(this, "akinai");
@@ -148,7 +148,7 @@ public class OmikujiNames {
 		/**
 		 * gakumonのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<String>("gakumon")/gakumonのプロパティ名
+		 * @return	gakumonのプロパティ名
 		 */
 		public PropertyName<String> gakumon(){
 			return new PropertyName<String>(this, "gakumon");
@@ -157,7 +157,7 @@ public class OmikujiNames {
 		/**
 		 * resultListのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<List<Result>>("result")/resultListのプロパティ名
+		 * @return	resultListのプロパティ名
 		 */
 		public _ResultNames resultList(){
 			return new _ResultNames(this, "resultList");
@@ -166,7 +166,7 @@ public class OmikujiNames {
 		/**
 		 * fortuneのプロパティ名を返すメソッド
 		 *
-		 * @return	new PropertyName<Fortune>("fortune")/fortuneのプロパティ名
+		 * @return	fortuneのプロパティ名
 		 */
 		public _FortuneNames fortune(){
 			return new _FortuneNames(this, "fortune");

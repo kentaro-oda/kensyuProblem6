@@ -42,7 +42,17 @@
 			<html:hidden property="birthday" value = "${f:h(birthday)}"/>
 			<input type = "submit" value = "過去半年間のあなたの運勢" class = "list_button left_margin"/>
 		</s:form>
-		</div>
+		</div><br>
+
+		<s:form action = "/entry/">
+		<html:hidden property="strToday" value = "${f:h(strToday)}"/>
+		<html:hidden property="birthday" value = "${f:h(birthday)}"/>
+		<html:hidden property="fortuneName" value = "${f:h(omikujiBean.fortune.fortuneName)}"/>
+		<html:hidden property="negaigoto" value = "${f:h(omikujiBean.negaigoto)}"/>
+		<html:hidden property="akinai" value = "${f:h(omikujiBean.akinai)}"/>
+		<html:hidden property="gakumon" value = "${f:h(omikujiBean.gakumon)}"/>
+		<input type = "submit" value = "結果をメールで送信" class = "regist_button top_margin"/>
+		</s:form>
 
 		<div class = "top_margin">
 		<a href = "/kensyuJuly24th/inputBirthday/">トップへ戻る</a>

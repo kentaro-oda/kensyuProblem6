@@ -35,4 +35,5 @@ public class Result extends Common {
 	@ManyToOne
 	@JoinColumn(name = "OMIKUJI_ID", referencedColumnName = "OMIKUJI_ID")
 	public Omikuji omikuji;
+
 }

@@ -17,7 +17,7 @@ public class ResultNames {
 	/**
 	 * fortuneDayのプロパティ名を返却するメソッド
 	 *
-	 * @return	new PropertyName<Date>("fortune_day")/fortuneDayのプロパティ名
+	 * @return	fortuneDayのプロパティ名
 	 */
 	public static PropertyName<Date> fortuneDay(){
 		return new PropertyName<Date>("fortuneDay");
@@ -26,7 +26,7 @@ public class ResultNames {
 	/**
 	 * birthdayのプロパティ名を返却するメソッド
 	 *
-	 * @return	new PropertyName<Date>("birthday")/birthdayのプロパティ名
+	 * @return	birthdayのプロパティ名
 	 */
 	public static PropertyName<Date> birthday(){
 		return new PropertyName<Date>("birthday");
@@ -35,7 +35,7 @@ public class ResultNames {
 	/**
 	 * omikujiIdのプロパティ名を返却するメソッド
 	 *
-	 * @return	new PropertyName<Integer>("omikuji_id")/omikujiIdのプロパティ名
+	 * @return	omikujiIdのプロパティ名
 	 */
 	public static PropertyName<Integer> omikujiId(){
 		return new PropertyName<Integer>("omikujiId");
@@ -44,11 +44,12 @@ public class ResultNames {
 	/**
 	 * omikujiのプロパティ名を返却するメソッド
 	 *
-	 * @return	new _OmikujiNames("omikuji")/omikujiのプロパティ名
+	 * @return	omikujiのプロパティ名
 	 */
 	public static _OmikujiNames omikuji() {
 		return new _OmikujiNames("omikuji");
 	}
+
 
 	/**
 	 *インスタンス構築とプロパティ名返却をするクラス
@@ -81,13 +82,13 @@ public class ResultNames {
 		 * @param name		名前
 		 */
 		public _ResultNames(final PropertyName<?> parent, final String name) {
-
+			super(parent, name);
 		}
 
 		/**
 		 * fortuneDayのプロパティ名を返却するメソッド
 		 *
-		 * @return	new PropertyName<Date>("fortune_day")/fortuneDayのプロパティ名
+		 * @return	fortuneDayのプロパティ名
 		 */
 		public PropertyName<Date> fortuneDay(){
 			return new PropertyName<Date>(this, "fortuneDay");
@@ -96,7 +97,7 @@ public class ResultNames {
 		/**
 		 * birthdayのプロパティ名を返却するメソッド
 		 *
-		 * @return	new PropertyName<Date>("birthday")/birthdayのプロパティ名
+		 * @return	birthdayのプロパティ名
 		 */
 		public PropertyName<Date> birthday(){
 			return new PropertyName<Date>(this, "birthday");
@@ -105,7 +106,7 @@ public class ResultNames {
 		/**
 		 * omikujiIdのプロパティ名を返却するメソッド
 		 *
-		 * @return	new PropertyName<Integer>("omikuji_id")/omikujiIdのプロパティ名
+		 * @return	omikujiIdのプロパティ名
 		 */
 		public PropertyName<Integer> omikujiId(){
 			return new PropertyName<Integer>(this, "omikujiId");
@@ -114,10 +115,11 @@ public class ResultNames {
 		/**
 		 * omikujiのプロパティ名を返却するメソッド
 		 *
-		 * @return	new _OmikujiNames("omikuji")/omikujiのプロパティ名
+		 * @return	omikujiのプロパティ名
 		 */
 		public _OmikujiNames omikuji() {
 			return new _OmikujiNames(this, "omikuji");
 		}
+
 	}
 }
